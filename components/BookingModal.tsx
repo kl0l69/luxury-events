@@ -1,3 +1,5 @@
+// أرســــــــــــيــــــــــــنكك كان هنــــــــــــــــا //
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, User, Phone, Calendar, Users, Wallet, MapPin, FileText } from 'lucide-react';
@@ -9,7 +11,9 @@ interface BookingModalProps {
   onClose: () => void;
 }
 
-// مودال الحجز (النافذة المنبثقة)
+
+
+/* مودال الحجز (النافذة المنبثقة) */
 const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState<BookingFormData>({
     name: '',
@@ -21,10 +25,12 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
     notes: ''
   });
 
+  /* تحديث بيانات حقول الإدخال */
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  /* إرسال الطلب إلى واتساب */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `
@@ -45,7 +51,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
     onClose();
   };
 
-  // مكون مساعد لحقول الإدخال مع أيقونة
+  /* مكون مساعد لحقول الإدخال مع الأيقونة */
   const InputWrapper = ({ icon: Icon, children }: { icon: any, children: React.ReactNode }) => (
     <div className="relative group">
       <div className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-secondary transition-colors duration-300">
@@ -59,6 +65,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+          {/* خلفية المودال */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -67,6 +74,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
             className="absolute inset-0 bg-black/90 backdrop-blur-md"
           />
           
+          {/* محتوى المودال */}
           <motion.div
             initial={{ scale: 0.95, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -87,8 +95,10 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
               </button>
             </div>
 
-            {/* الفورم */}
+            {/* نموذج الإدخال */}
             <form onSubmit={handleSubmit} className="p-6 space-y-5 overflow-y-auto custom-scrollbar">
+
+              {/* الاسم */}
               <div className="space-y-2">
                 <label className="text-xs font-bold text-secondary uppercase tracking-wider">الاسم بالكامل</label>
                 <InputWrapper icon={User}>
@@ -103,6 +113,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                 </InputWrapper>
               </div>
 
+              {/* الهاتف + نوع المناسبة */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-secondary uppercase tracking-wider">رقم الهاتف</label>
@@ -117,6 +128,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     />
                   </InputWrapper>
                 </div>
+
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-secondary uppercase tracking-wider">نوع المناسبة</label>
                   <InputWrapper icon={Calendar}>
@@ -126,18 +138,19 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                       onChange={handleChange}
                       className="w-full bg-white/5 border border-white/10 rounded-xl pr-12 pl-4 py-4 text-white focus:border-secondary focus:bg-white/10 outline-none appearance-none"
                     >
-                      <option value="wedding" className="bg-surface text-gray-300">حفل زفاف</option>
-                      <option value="birthday" className="bg-surface text-gray-300">عيد ميلاد</option>
-                      <option value="graduation" className="bg-surface text-gray-300">حفل تخرج</option>
-                      <option value="baby_shower" className="bg-surface text-gray-300">استقبال مولود</option>
-                      <option value="corporate" className="bg-surface text-gray-300">حدث شركات</option>
+                      <option value="wedding">حفل زفاف</option>
+                      <option value="birthday">عيد ميلاد</option>
+                      <option value="graduation">حفل تخرج</option>
+                      <option value="baby_shower">استقبال مولود</option>
+                      <option value="corporate">حدث شركات</option>
                     </select>
                   </InputWrapper>
                 </div>
               </div>
 
+              {/* الضيوف + المدينة */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                 <div className="space-y-2">
+                <div className="space-y-2">
                   <label className="text-xs font-bold text-secondary uppercase tracking-wider">عدد الضيوف</label>
                   <InputWrapper icon={Users}>
                     <input
@@ -150,6 +163,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     />
                   </InputWrapper>
                 </div>
+
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-secondary uppercase tracking-wider">المدينة</label>
                   <InputWrapper icon={MapPin}>
@@ -164,6 +178,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
+              {/* الميزانية */}
               <div className="space-y-2">
                 <label className="text-xs font-bold text-secondary uppercase tracking-wider">الميزانية المقترحة</label>
                 <InputWrapper icon={Wallet}>
@@ -177,6 +192,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                 </InputWrapper>
               </div>
 
+              {/* ملاحظات إضافية */}
               <div className="space-y-2">
                 <label className="text-xs font-bold text-secondary uppercase tracking-wider">ملاحظات إضافية</label>
                 <InputWrapper icon={FileText}>
@@ -190,6 +206,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                 </InputWrapper>
               </div>
 
+              {/* زر الإرسال */}
               <button
                 type="submit"
                 className="w-full py-4 bg-gradient-to-r from-secondary to-gold-dark text-primary font-bold text-lg rounded-xl shadow-lg hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transform hover:-translate-y-1 transition-all duration-300 mt-2"
