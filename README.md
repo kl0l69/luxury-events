@@ -1,4 +1,7 @@
-# 🎩 Luxury Events Egypt - منصة تنظيم المناسبات الفاخرة
+# Luxury Events Egypt - منصة تنظيم المناسبات 
+<p align="center">
+ <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Biting%20Lip.png" width="100" height="100" />
+</p>
 
 أهلاً يا وحوش في الريبو الخاص بمشروع **Luxury Events**. المشروع ده عبارة عن موقع لانديج بيج (Landing Page) عالي الجودة لتنظيم الحفلات والمناسبات، معمول بستايل "مودرن وفخيم" (Black & Gold Theme).
 
@@ -92,15 +95,19 @@
 
 ---
 
-## 📞 تواصل مع المطور
+##  *Designed & Developed by ***a r s i n e k*** © 2025*
+[![a r s i n e k ](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/201141345223) 
 
-لو في أي استفسار أو حاجة واقفة معاك، كلمني:
+* **Email:** [ayrn194](mailto:ayrn194@gmail.com)
+* **GitHub:** [kl0l69](https://github.com/kl0l69)
+* **Facebook:** [nq703](https://facebook.com/nq703)
+* **Instagram:** [kl0l69](https://instagram.com/kl0l69)
+* **Telegram:** [nq703](https://t.me/nq703)
+- يــلا يا رجالة، كودينج سعيد !
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/b5adb0b9-2e52-4707-be4d-00c4fac304a6" 
+       alt="Intro Animation" width="800"/>
+</div>
 
-- **Phone & WhatsApp:** [+201141345223](https://wa.me/201141345223)
-- **Email:** [ayrn194@gmail.com](mailto:ayrn194@gmail.com)
-- **GitHub:** [kl0l69](https://github.com/kl0l69)
-- **Telegram:** [@nq703](https://t.me/nq703)
 
----
 
-يلا يا رجالة، كودينج سعيد!
