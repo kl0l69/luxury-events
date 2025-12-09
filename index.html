@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- هنا بنضيف صورة الأيكون اللي بتظهر فوق في التاب -->
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/rn0uichl8o/loly-creation-1765303316215.png" />
+
+    <!-- إعدادات السيو الأساسية للموقع -->
+    <title>Luxury Events</title>
+
+    <meta name="description" content="أفخم شركة لتنظيم الحفلات والمناسبات في مصر. نقدم خدمات تخطيط حفلات الزفاف، أعياد الميلاد، والمؤتمرات بلمسة من الفخامة والرقي. احجز مناسبتك الآن." />
+    <meta name="keywords" content="تنظيم حفلات, زفاف, مصر, مناسبات فاخرة, تخطيط أفراح, أعياد ميلاد, قاعات افراح, Luxury Events, Wedding Planner Egypt, Cairo Events" />
+    <meta name="author" content="team ARSINEK" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0D0D0D" />
+
+    <!-- بيانات المشاركة على فيسبوك وواتساب -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://luxury-events.com/" />
+    <meta property="og:title" content="Luxury Events" />
+    <meta property="og:description" content="نصنع من مناسباتكم ذكريات خالدة. خدمات تنظيم حفلات زفاف ومناسبات خاصة بأعلى معايير الفخامة." />
+    <meta property="og:image" content="https://ik.imagekit.io/rn0uichl8o/loly-creation-1765303316215.png" />
+    <meta property="og:locale" content="ar_EG" />
+    <meta property="og:site_name" content="Luxury Events Egypt" />
+
+    <!-- بيانات العرض على تويتر -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://luxury-events.com/" />
+    <meta property="twitter:title" content="Luxury Events | تخطيط مناسبات فاخر" />
+    <meta property="twitter:description" content="أفضل شركة تنظيم حفلات في مصر. فخامة، إبداع، وتميز." />
+    <meta property="twitter:image" content="https://ik.imagekit.io/rn0uichl8o/loly-creation-1765303316215.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      // هنا بنعدل إعدادات Tailwind حسب الألوان والخطوط اللي اخترناها
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0D0D0D',
+              secondary: '#D4AF37',
+              surface: '#1A1A1A',
+              text: '#F8F8F8',
+              'gold-light': '#FCD34D',
+              'gold-dark': '#B4941F',
+            },
+            fontFamily: {
+              sans: ['Cairo', 'sans-serif'],
+            },
+            animation: {
+              'glow': 'glow 3s ease-in-out infinite alternate',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              // تأثير الإضاءة المتحركة
+              glow: {
+                '0%': { boxShadow: '0 0 5px #D4AF37' },
+                '100%': { boxShadow: '0 0 20px #D4AF37, 0 0 10px #FCD34D' },
+              },
+              // حركة الطفو
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      /* سكرول ناعم ومن غير ما الهيدر يغطي المحتوى */
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+      }
+
+      /* لون الخلفية الأساسي ولون الكتابة */
+      body {
+        background-color: #0D0D0D;
+        color: #F8F8F8;
+      }
+
+      /* شكل شريط التمرير */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0D0D0D; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D4AF37; 
+      }
+    </style>
+
+    <!-- خريطة الاستيراد بتاعة React و Framer -->
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@19",
+          "react/": "https://esm.sh/react@19/",
+          "react-dom": "https://esm.sh/react-dom@19",
+          "react-dom/": "https://esm.sh/react-dom@19/",
+          "lucide-react": "https://esm.sh/lucide-react@0.556.0",
+          "framer-motion": "https://esm.sh/framer-motion@12.23.25"
+        }
+      }
+    </script>
+
+    <!-- ملف الـ CSS الأساسي -->
+    <link rel="stylesheet" href="/index.css">
+  </head>
+
+  <body>
+    <!-- هنا React بيشتغل ويعرض كل الصفحات -->
+    <div id="root"></div>
+
+    <!-- ملف التشغيل الرئيسي -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
