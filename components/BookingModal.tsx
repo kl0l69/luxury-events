@@ -234,8 +234,5 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
   );
 };
 
-// أرســــــــــــيــــــــــــنكك كان هنــــــــــــــــا //
-
-export default BookingModal;
 
 export default BookingModal;
