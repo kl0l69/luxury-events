@@ -10,10 +10,6 @@ interface BookingModalProps {
   onClose: () => void;
 }
 
-// ================================
-//  الـ Wrapper الخاص بالإنبوت والأيقونات
-//  (ثابت ومش بيتعمل له re-render بعد كل كتابة)
-// ================================
 const InputWrapper = ({ icon: Icon, children }: { icon: LucideIcon | any, children: React.ReactNode }) => (
   <div className="relative group">
     {/* الأيقونة */}
